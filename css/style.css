@@ -1,0 +1,375 @@
+/* -----------------------------------------
+                    共通
+----------------------------------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: Helvetica Neue、Arial、Hiragino Sans、Hiragino Kaku Gothic ProN、Meiryo、sans-serif
+  ;
+  font-size: 0.9rem;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+li {
+  list-style: none;
+}
+
+.wrapper {
+  margin-bottom: 10vh;
+}
+
+.content-img {
+  background: pink;
+  width: 100%;
+  height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  color: #fff;
+  font-size: 40px;
+}
+
+.content {
+  padding: 0 16px;
+}
+
+.sub-title {
+  text-align: center;
+  margin: 30px auto;
+  text-decoration: underline 5px red;
+}
+
+/* -----------------------------------------
+                  ヘッダー
+----------------------------------------- */
+
+header {
+  background-image: url(image/header01.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+header nav {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+header ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+header li {
+  margin-left: 20px;
+}
+
+header a {
+  color: #fff;
+  font-weight: bold;
+  transition: all  0.3s ease;
+  filter: drop-shadow(1px 1px 2px #121212);
+}
+
+header a:hover {
+  color: #e03131;
+}
+
+header h1 {
+  font-size: 80px;
+  color: #fff;
+}
+
+/* -----------------------------------------
+                  メイン
+----------------------------------------- */
+
+/* section menu */
+.menu-img {
+  background-image: url(image/menu.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#menu dl {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+#menu dt {
+  width: 75%;
+  border-bottom: 1px dotted #333;
+  margin: 10px 0 0;
+}
+
+#menu dd {
+  width: 10%;
+  text-align: center;
+  margin: 15px 0 0;
+}
+
+/* section about */
+.about-img {
+  background-image: url(image/about.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#about li {
+  margin-bottom: 25px;
+}
+
+.link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5vh 0 0;
+}
+
+#about .btn {
+  width: 160px;
+  height: 50px;
+  line-height: 3.5;
+  display: inline-block;
+  color: #000;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+#about .btn span {
+  position: relative;
+  display: block;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+/*
+.btn::before 右の赤線
+.btn::after 下の赤線
+.btn span::before 左の赤線
+.btn span::after 上の赤線
+*/
+#about .btn::before,
+#about .btn::after {
+  position: absolute;
+  content: "";
+  right: 0;
+  bottom: 0;
+  background: #e03131;
+  transition: all 0.3s ease;
+}
+
+#about .btn span::before,
+#about .btn span::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  background: #e03131;
+  transition: all 0.3s ease;
+}
+
+#about .btn::before,
+#about .btn span::before {
+  width: 2px;
+  height: 50%;
+}
+
+#about .btn::after,
+#about .btn span::after {
+  width: 20%;
+  height: 2px;
+}
+
+/*
+ホバー時の縦の動作
+右の赤線と左の赤線の高さを100%にする
+*/
+#about .btn:hover::before,
+#about .btn span:hover::before {
+  height: 100%;
+}
+
+/*
+ホバー時の横の動作
+下の赤線と上の赤線の横幅を100%にする
+*/
+#about .btn:hover::after,
+#about .btn span:hover::after {
+  width: 100%;
+}
+
+/* section location */
+.location-img {
+  background-image: url(image/location02.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.map {
+  margin-bottom: 20px;
+}
+
+.map iframe {
+  filter: grayscale(100%);
+}
+
+.access p {
+  font-size: 0.7rem;
+}
+
+.access p + p {
+  margin-top: 10px;
+}
+
+/* -----------------------------------------
+                  フッター
+----------------------------------------- */
+
+footer {
+  /* background: tomato; */
+  width: 100%;
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer p {
+  font-size: 0.5rem;
+}
+
+
+@media screen and (min-width: 768px) {
+/* -----------------------------------------
+                  共通
+----------------------------------------- */
+
+  .title {
+    font-size: 70px;
+  }
+
+  .content {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .sub-title {
+    font-size: 37px;
+  }
+
+  /* -----------------------------------------
+                  ヘッダー
+----------------------------------------- */
+
+  header h1 {
+    font-size: 120px;
+  }
+
+  /* -----------------------------------------
+                  menu
+----------------------------------------- */
+
+.menu-img {
+  height: 65vh;
+  background-attachment: fixed;
+}
+
+  .menu-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10vh;
+  }
+
+  #menu dl {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+  .left-menu {
+    width: 50%;
+    height: 100%;
+    border-right: 1px solid #333;
+  }
+  
+  .right-menu {
+    width: 50%;
+    height: 100%;
+  }
+
+  /* -----------------------------------------
+                  about
+----------------------------------------- */
+
+.about-img {
+  height: 65vh;
+  background-attachment: fixed;
+}
+
+  #about ul {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  #about li {
+    width: 45%;
+  }
+
+  /* -----------------------------------------
+                  location
+----------------------------------------- */
+
+.location-img {
+  height: 65vh;
+  background-attachment: fixed;
+}
+
+  .access p {
+    font-size: 0.8rem;
+  }
+}
